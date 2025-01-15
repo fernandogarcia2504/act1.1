@@ -1,8 +1,13 @@
-// Programa que ordena N valores de mayor a menor usando Merge Sort.
-// Autores: Luis Angel Alba Alfaro - A01640314
+/*
+ * File: main.cpp
+ * Description: Programa que ordena N valores de mayor a menor usando Merge Sort.
+ * Authors:  Luis Angel Alba Alfaro - A01640314
 //          Fernando García Tejeda - A01642285
 //          Bruno Márquez Puig     - A00834415
-// Fecha de creación/modificación: 12/01/2025
+ * Created: January 13, 2025
+ * License: Educational use only.
+ */
+
 
 #include <iostream>
 #include <vector>
@@ -52,13 +57,13 @@ void merge(vector<double>& arr, int left, int mid, int right) {
 }
 
 // Función recursiva de MergeSort con complejidad O(n log n)
-void mergeSort(vector<double>& arr, int left, int right) {
+void merge_sort(vector<double>& arr, int left, int right) {
     if (left < right) {
         int mid = left + (right - left) / 2;
 
         // Ordenar la primera y segunda mitad
-        mergeSort(arr, left, mid);
-        mergeSort(arr, mid + 1, right);
+        merge_sort(arr, left, mid);
+        merge_sort(arr, mid + 1, right);
 
         // Fusionar las mitades ordenadas
         merge(arr, left, mid, right);
@@ -76,7 +81,7 @@ int main() {
         cin >> valores[i];
     }
 
-    mergeSort(valores, 0, N - 1);
+    merge_sort(valores, 0, N - 1);
 
     cout << "\nResultado:" << endl;
     cout << "Valores ordenados de mayor a menor: " << endl;
