@@ -2,8 +2,8 @@
  * File: main.cpp
  * Description: Programa que ordena N valores de mayor a menor usando Merge Sort.
  * Authors:  Luis Angel Alba Alfaro - A01640314
-//          Fernando García Tejeda - A01642285
-//          Bruno Márquez Puig     - A00834415
+ *         Fernando García Tejeda - A01642285
+ *         Bruno Márquez Puig     - A00834415
  * Created: January 13, 2025
  * License: Educational use only.
  */
